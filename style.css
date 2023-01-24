@@ -161,19 +161,37 @@ html, body
 
 .professional-experience
 {
-   color:#333;
-   text-indent: 50px;
-   letter-spacing: 1.15pm;
-   text-align: center;
+    color:#333;
+    background:whitesmoke;
+    align-items: left;
+    letter-spacing: 1.15pm;
+ 
+}
+.professional-experience:hover
+{
+    border-radius: 1%;
+    background: gainsboro;
 }
 
 .company 
 {
+        
+        color:black;
         padding:10px;
-        border:1px solid grey;
-        list-style-type: upper-roman;
-        list-style-position: inside;
+        border:1px solid black;
+        box-shadow: 5px 10px #888888;
    
+}
+.randr
+{
+    white-space: pre-wrap;
+    color:black;
+    
+}
+.company:hover
+{
+    border-radius: 1%;
+    background: gainsboro;
 }
 /* CSS */
 .flag-icon {
@@ -187,4 +205,16 @@ html, body
   
   .flag-icon-can {
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/320px-Flag_of_Canada.svg.png');
+  }
+  .flag-icon {
+    width: 1.5em;
+    height: 1em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .flag-icon-ind {
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg');
   }
