@@ -32,7 +32,7 @@ function updateCounter(){
 
   // update the HTML element with the id 'counter' with all of the values
   //document.getElementById('counter').innerHTML = years+' years, '+months+' months';
-  document.getElementById('counter').innerHTML = years+' years,  and '+months+' months( '+days+'D:'+hours+'H:'+minutes+'M:'+seconds+'S)';
+  document.getElementById('counter').innerHTML = years+' years and '+months+' months( '+days+'D:'+hours+'H:'+minutes+'M:'+seconds+'S)';
 }
 
 // run the updateCounter function every second
