@@ -31,8 +31,8 @@ function updateCounter(){
   seconds = seconds < 10 ? '0' + seconds : seconds;
 
   // update the HTML element with the id 'counter' with all of the values
-  document.getElementById('counter').innerHTML = years+' years, '+months+' months';
-  document.getElementById('counter').innerHTML = years+' years,  and '+months+' months, days:hours:minutes:seconds';
+  //document.getElementById('counter').innerHTML = years+' years, '+months+' months';
+  document.getElementById('counter').innerHTML = years+' years,  and '+months+' months(days:hours:minutes:seconds)';
 }
 
 // run the updateCounter function every second
