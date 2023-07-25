@@ -3,6 +3,8 @@ var startDate = new Date("July 1, 2004");
 
 // this function runs every second and updates the counter
 function updateCounter(){
+
+var now = new Date();
 var diff = now.getTime() - startDate.getTime();
 
 // convert the difference to years, months, days, hours, minutes, and seconds
