@@ -1,291 +1,434 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sachin's Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="counterscript.js"></script> 
+    <title>Sachin Tewari · AI Solution Architect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        /* header */
+        .main-header {
+            background: #0b2b40;
+            color: white;
+            padding: 1rem 0 0.5rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .main-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.8rem;
+            list-style: none;
+            padding: 0.5rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .main-nav ul li a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            transition: 0.2s;
+        }
+        .main-nav ul li a:hover {
+            color: #b6d4e3;
+            text-decoration: underline;
+        }
+        .website-name {
+            font-size: 2.2rem;
+            font-weight: 600;
+            padding: 0.4rem 1rem 1rem 1rem;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .website-name-small {
+            font-size: 1rem;
+            font-weight: 300;
+            color: #b6d4e3;
+        }
+        .profile-image {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            display: block;
+            margin: -3rem auto 1rem auto;
+            background: white;
+        }
+        .section-header {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 1.8rem 0 0.25rem 0;
+            color: #0b2b40;
+            border-left: 6px solid #2b6c8f;
+            padding-left: 1rem;
+        }
+        .section-header-small {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 1.8rem 0 0.8rem 0;
+            color: #1e4b62;
+            border-bottom: 2px solid #dce7f0;
+            padding-bottom: 0.3rem;
+        }
+        .content-section {
+            background: white;
+            padding: 2rem 2rem 2.5rem 2rem;
+            border-radius: 24px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.03);
+            margin: 2rem auto;
+        }
+        .professional-experience {
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            background: #f1f6f9;
+            padding: 1.2rem 1.8rem;
+            border-radius: 20px;
+            border-left: 4px solid #2b6c8f;
+        }
+        .professional-experience strong {
+            color: #0b2b40;
+        }
+        .company {
+            margin-top: 1.8rem;
+            background: #f9fcff;
+            padding: 0.8rem 1.5rem 0.5rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid #e9eff4;
+        }
+        .companyname {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0b2b40;
+        }
+        .companytitle {
+            font-size: 1rem;
+            color: #2b5f7a;
+            font-weight: 500;
+        }
+        .period {
+            font-size: 0.9rem;
+            color: #5b6f82;
+            margin-top: 0.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .flag-icon {
+            font-size: 1.2rem;
+        }
+        .randr {
+            margin: 1rem 0 0.8rem 0;
+            padding-left: 0.2rem;
+            line-height: 1.7;
+        }
+        .randr ul {
+            list-style: disc;
+            padding-left: 1.8rem;
+        }
+        .randr li {
+            margin-bottom: 0.3rem;
+        }
+        .education {
+            margin-top: 2.5rem;
+            background: #f1f6f9;
+            padding: 1.2rem 1.8rem;
+            border-radius: 24px;
+        }
+        .education p {
+            line-height: 1.9;
+        }
+        .main-footer {
+            background: #0b2b40;
+            color: #e2e8f0;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        .main-footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer-nav {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        .footer-nav li a img {
+            width: 32px;
+            height: 32px;
+            filter: brightness(0) invert(1);
+            transition: 0.2s;
+        }
+        .footer-nav li a:hover img {
+            opacity: 0.7;
+        }
+        .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1.2rem;
+            margin: 1.2rem 0 0.8rem 0;
+        }
+        .badge {
+            background: #e7edf3;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #1d3d52;
+            letter-spacing: 0.3px;
+        }
+        .summary-highlight {
+            background: #f0f7fd;
+            border-radius: 24px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.2rem 0;
+            border-left: 8px solid #2b6c8f;
+        }
+        .ai-tag {
+            background: #1e4b62;
+            color: white;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        @media (max-width: 700px) {
+            .main-nav ul {
+                gap: 0.8rem;
+            }
+            .website-name {
+                font-size: 1.8rem;
+                flex-wrap: wrap;
+            }
+            .profile-image {
+                width: 110px;
+                height: 110px;
+                margin-top: -2.5rem;
+            }
+            .content-section {
+                padding: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
- <header class="main-header">
-    <nav class ="nav main-nav">
-        <ul>
-            <li>
-                <a href="https://learn.microsoft.com/en-us/users/tewarisachin/transcript/v2z4qtn30ew2rx6" target="_blank">Microsoft</a>
-            </li>
-            <li>
-               <a href="https://github.com/mailforsachin?%20tab=repositories&q=&type=source&language=&sort=" target="_blank">GitHub</a>
-            </li>
-            <li>
-                <a href="https://stackoverflow.com/users/2380526/sash-sheen" target="_blank">Stack Overflow</a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/tewarisachin/details/recommendations/?detailScreenTabIndex=0" target="_blank">References</a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/tewarisachin/details/projects/" target="_blank">Projects</a>
-            </li>
-            <li>
-                <a href="https://nowlearning.servicenow.com/lxp?id=nl_public&user=sachintewa53af45" target="_blank">ServiceNow</a>
-            </li>
-
-            <ol>
-
-                 <li>
-               <!-- <strong><a href="https://raw.githubusercontent.com/mailforsachin/mybio/27b40d470ceb03d861b3fde648fd478c08838117/Sachin%20Tewari%20(Cover).pdf" target="_blank">Download my Cover Letter</a></strong>
-            </li>
-            <li>
-                <strong><a href="https://raw.githubusercontent.com/mailforsachin/mybio/main/Sachin%20Tewari%20(Resume)_ITConsultant_.docx" target="_blank">Download my Resume</a></strong>
-            </li>
-                -->
-            </ol>
-             
-          
-        </ul>
-    </nav>
-   <div class="website-name website-name-large"> 
-    Sachin Tewari
- </header>
-
- <img class ="profile-image" src="images/1671300722364.jfif" alt="">
- <p>
-         
- </p>
-</section>
-<footer class="main-footer">
- <div class="container main-footer-container">
- <h3 class="website-name">
-     
- </h1>
- <ul class="nav footer-nav">
-     <li><a href="http://www.instagram.com" target="_blank"><img src="images/Instagram.svg.png" ></a></li>
-     <li><a href="http://www.linkedin.com" target="_blank"><img src="images/linkedin.svg" ></a></li>
- </ul>
-</div>
-</footer>
-
- <section class="content-section container">
-    <h2 class="section-header">
-        Project Manager Lead|Ex-Director| ITIL, Cloud-based Solutions | Canada
-    </h2>
-    <h3 class="section-header-small">
-        Summary of my profile
-    </h3>
-    <p class="professional-experience">
-
-        <strong>
-        With <span class="professional-experience" id="counter"></span> 
-        of experience, I am a passionate and results-oriented Project Management Lead leveraging my extensive expertise in project management, cloud computing, enterprise architecture, and service delivery process automation to deliver innovative and cost-effective solutions that meet clients' business needs.
-        I have a proven track record of successfully managing and implementing advanced technological projects using agile methodologies and best practices in the software development life cycle (SDLC). My ability to cultivate strong vendor and stakeholder relationships has consistently ensured compliance with service level agreements (SLAs) and maintained high levels of customer satisfaction.
-        Some of my notable achievements include spearheading the IT strategy for application development at NTT DATA Services, developing custom in-house monitoring tools at Aon, and receiving multiple awards and certifications for my contributions to innovation and excellence in the field.
-        Driven by a mission to deliver value-added, cutting-edge IT solutions that empower organizations to achieve their goals and optimize performance, I continuously seek to learn and explore new technologies and industry trends. I thrive on solving complex challenges and collaborating with teams to share ideas and insights.
-        As a lifelong learner currently pursuing a PhD in Management Information Systems, I am committed to enhancing my knowledge and applying it to drive impactful results in project management and IT strategy.
-        </strong>
-
-</p>
-    <div class="company">
-        <p>
-            <div class="companyname">
-                    <strong> Stefanini Canada Ltd.</strong>
-            </div>
-            <div class="companytitle">
-                <em>Project Manager Lead (NA/APAC) </em>
-            </div>
-            <div class="period">
-                March 2025 - <i> Current Date </i>
-                <div class="flag-icon flag-icon-can"></div>
-            </div>   
-        </p>
-    </div>
-    
-    <p class="randr">
-     As a seasoned TPMO Manager at Stefanini for North America and APAC, I lead diverse teams in delivering innovative technical projects across various domains. 
-     My strategic project leadership is to ensure successful project outcomes.
-     Besides this, I mentor a global team, fostering a culture of continuous improvement and accountability. 
-    </p>
-
-        
- </p>
-    <div class="company">
-        <p>
-            <div class="companyname">
-                    <strong> PamTen Technologies</strong>
-            </div>
-            <div class="companytitle">
-                <em>Senior Technical Project Manager</em>
-            </div>
-            <div class="period">
-                June 2021 - <i>Mar 2025</i>
-                <div class="flag-icon flag-icon-can"></div>
-            </div>   
-        </p>
-    </div>
-    
-    <p class="randr">
-        1.	Demonstrated ability to strategically plan, design, and implement innovative technological solutions to meet clients' business needs.
-        2.	Extensive knowledge and expertise in cloud computing (AWS Certified Cloud Practitioner, Certified in Cybersecurity (ISC)2, Azure AI Engineer Associate, Azure Fundamentals, AI Fundamentals, Data Fundamentals, and Power Platform Fundamentals), enterprise architecture and Tools (ServiceNow Certified Administrator), Infrastructure planning, Infrastructure design, system design, system integration, resulting in successful solution implementations.
-        3.	Proficient in conducting thorough needs assessments, identifying opportunities for optimization, and recommending cost-effective solutions aligned with organizational goals (ITIL® Foundation Certificate).
-        4.	Skilled in project management (Google Certified Foundations), ensuring timely delivery of projects within budget and scope, leading cross-functional teams, fostering collaboration, and building strong relationships with stakeholders to achieve project objectives.
-        5.	Strong understanding of emerging technologies, industry trends, and best practices, resulting in the development of cutting-edge solutions for clients, while maintaining security, compliance, vendor and stakeholder management.
-        6.	Expert in software development life cycle (SDLC) and agile methodology, business analysis and risk management, to deliver high-quality products, meet tight deadlines and exceed client expectations.
-        7.	Recognized for exceptional problem-solving abilities, able to identify and address complex issues, , optimizing performance, cost management, time management, process improvement, system performance enhancement and introducing innovation.
-        8.	As Technical Solutions Architect, adept in conducting training and workshops for clients and team members, enhancing their understanding of technology solutions and promoting adoption of new processes.
-        9.	Participate in responding to RFI/RFQs, SOW quickly and accurately for customers, while providing comprehensive explanations of the recommended solutions, baseline pricing and reporting weekly metrics via Salesforce to C-Suite leadership. Involved with 4 crucial project wins since joining the Proposal Team last year (2023).
-    </p>
-
-    <div class="company">
-        <p>
-            <div class="companyname">
-                    <strong> NTT DATA Services</strong>
-            </div>
-            <div class="companytitle">
-                <em>Director</em>
-            </div>
-            <div class="period">
-                December 2014 - June 2021 (6 years 7 months)
-                <div class="flag-icon flag-icon-ind"></div>
-            </div>   
-        </p>
-    </div>
-
-    <p class="randr">
-        1.	Led NTT's End User Technology Services, earning recognition for Innovation and spearheaded IT Strategy around application development of scalable secure virtual agents/assistants/chatbots/IVR & automated multi-step activities/business processes/process flows with advanced DevOps including QA & CICD. 
-        2.	Oversaw end-to-end solutions delivery including Security Management, SLA/KPIs, Service Availability using integrations with Intune Endpoint Management, Service Now, MS Project, SharePoint, o365/m365, and leveraging Power BI/Azure Cosmos DB based service reporting for continuous service improvement.
-        3.	Managed global budgets & developed Cost Models with the Account/Finance Leadership to optimize processes & track costs for cost-reduction objectives, while ensuring Team Development, resulting in a 15% increase in efficiency for the organization.
-        4.	Involved in ensuring quality assurance, staff development, performance management, vendor management, information security management to receive approval from security solutions and team, contract negotiations, security compliance, general administration, performance evaluations, technical specifications, project management, coaching, and managing production environment.
-        5.	Managed and maintained data privacy, vendor relationships, and ensuring PCI compliance.
-        6.	Served as Service Transition Transformation Leader for FogLight, Zenoss (Docker based) & App Response Time Monitoring service offering, upgrades, and transition to cross-tools.
-    </p > 
-
-    <div class="company">
-        <p>
-            <div class="companyname">
-                    <strong>Aon</strong>
-            </div>
-            <div class="companytitle">
-                <em>IND Tech Ops Lead</em>
-            </div>
-            <div class="period">
-                August 2011 - December 2014 (3 years 5 months)
-                <div class="flag-icon flag-icon-ind"></div>
-            </div>   
-        </p>
-    </div>
-        
-        
-    <p class="randr">
-        1.	Lead SME for IT infrastructure monitoring tools such as BMC suite of applications and xMatters.
-        2.	Proven experience in application development utilizing raw data to build simple, secure web applications that provide critical information to enterprise users.
-        3.	Lead for creating custom Inhouse Windows, Apache, MySQL and PhP (WAMP) based Dashboards, add-on utilities for asset management, infrastructure monitoring batch and API based (SOAP, RESTful) system to system integrations, reducing time needed to prepare reports by 50%.
-        4.	Responsible for leading professional meetings/presentations, overseeing and team guidance, meeting with clients, creating reports/feedback using PPL tools, studying gap-analysis, providing SOPs, handling tickets in different ticket management systems (Remedy, Service Now, ZenDesk) & providing technical support (Microsoft Desktop Support Technician), configuring systems/alerts, creating Platform scripts/backups (PowerShell/VB/Shell scripting), and implementing upgrades using Service Management principles.
-    </p > 
-
-    <div class="company">
-        <p>
-            <div class="companyname">
-                    <strong>Tata Consultancy Services</strong>
-            </div>
-            <div class="companytitle">
-                <em>IT Analyst</em>
-            </div>
-            <div class="period">
-                August 2010 - August 2011 (1 year 1 month)
-                <div class="flag-icon flag-icon-ind"></div>
-            </div>   
-        </p>
-    </div>
-    <p class="randr">
-        1. Involved as an experienced Solutions Analyst, L3 Subject Matter Expert (SME) and Systems Administrator (Sys Admin) into automating and monitoring multiple systems (BEM, SCOM 2007-Microsoft 365 environment, SolarWinds, IPMonitor, SUNMC, BMC Patrol, SCOM) in Infrastructure Center of Excellence (CoE). 
-       2.  Lead for Discovery and Knowledge Transition (KT) for the tools in 2 months as per transition plan.
-    </p >
-
-    <div class="company">
-        <p>
-            <div class="companyname">
-                    <strong>NTT DATA</strong>
-            </div>
-            <div class="companytitle">
-                <em>System Integration Specialist</em>
-            </div>
-            <div class="period">
-                August 2006 - August 2010 (4 years 1 month)
-                <div class="flag-icon flag-icon-ind"></div>
-            </div>   
-        </p>
-    </div>
-
-    <p class="randr">        
-1. SME for BMC TMART, SilkTest, BMC Event Manager (BEM), NetIQ, Zenoss, BMC Patrol. 
-2. Engaged with Service Operations, IT Operations, and Continual Service Improvement (CSI) for infrastructure, server, and application monitoring (automation).
-</p>
-
-<div class="company">
-    <p>
-        <div class="companyname">
-                <strong>Valtech</strong>
+    <header class="main-header">
+        <nav class="nav main-nav">
+            <ul>
+                <li><a href="https://learn.microsoft.com/en-us/users/tewarisachin/transcript/v2z4qtn30ew2rx6" target="_blank">Microsoft</a></li>
+                <li><a href="https://github.com/mailforsachin?tab=repositories&q=&type=source&language=&sort=" target="_blank">GitHub</a></li>
+                <li><a href="https://stackoverflow.com/users/2380526/sash-sheen" target="_blank">Stack Overflow</a></li>
+                <li><a href="https://www.linkedin.com/in/tewarisachin/details/recommendations/?detailScreenTabIndex=0" target="_blank">References</a></li>
+                <li><a href="https://www.linkedin.com/in/tewarisachin/details/projects/" target="_blank">Projects</a></li>
+                <li><a href="https://nowlearning.servicenow.com/lxp?id=nl_public&user=sachintewa53af45" target="_blank">ServiceNow</a></li>
+            </ul>
+        </nav>
+        <div class="website-name">
+            Sachin Tewari
+            <span class="website-name-small">AI Solution Architect · Enterprise & Cloud</span>
         </div>
-        <div class="companytitle">
-            <em>Software Engineer</em>
-        </div>
-        <div class="period">
-            February 2005 - August 2006 (1 year 7 months)
-            <div class="flag-icon flag-icon-ind"></div>
-        </div>   
-    </p>
-</div>
-<p class="randr">
-        Supervisor and Point of Contact (PoC) as EAI/B2B analyst developer in IBM
-        WebSphere MQ in the Retail Domain.
-       </p>
+    </header>
 
-        <div class="company">
-            <p>
-                <div class="companyname">
-                        <strong>SIBIN Group</strong>
-                </div>
-                <div class="companytitle">
-                    <em>Junior Software Engineer</em>
-                </div>
-                <div class="period">
-                    July 2004 - February 2005 (8 months)
-                    <div class="flag-icon flag-icon-ind"></div>
-                </div>   
+    <img class="profile-image" src="images/1671300722364.jfif" alt="Sachin Tewari profile">
+
+    <section class="content-section container">
+        <h2 class="section-header">Project Manager Lead | Ex-Director | ITIL, Cloud-based Solutions</h2>
+        
+        <div class="summary-highlight">
+            <p><strong>AI Solution Architect · Enterprise & Cloud Architecture · Python/FastAPI · Microsoft 365 & Azure</strong><br>
+            Edmonton, Alberta, Canada · +1 514 210 2131 · sachintewari@icloud.com<br>
+            <span style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.3rem;">
+                <span>LinkedIn: linkedin.com/in/tewarisachin</span>
+                <span>GitHub: github.com/mailforsachin</span>
+                <span>Portfolio: mailforsachin.github.io/mybio/</span>
+            </span>
             </p>
         </div>
 
-        <p class="randr">
-        Junior Developer engaged with developing VB 6.0 software with Microsoft Access XP as the back end for a client, as a fresh Computer Science Engineering graduate.
-    </p>
+        <h3 class="section-header-small">Executive Summary</h3>
+        <p style="background: #f8fcff; padding: 0.8rem 1.5rem; border-radius: 20px; border: 1px solid #dfeaf3;">
+            AI solution and enterprise architect with <strong>22+ years</strong> of experience spanning enterprise platforms, cloud transformation, systems integration, application architecture, and global technology delivery. Combines senior-level architecture and stakeholder leadership with hands-on AI solution design and application development using Python, FastAPI, REST APIs, SQL/MariaDB, and modern LLM technologies. Skilled at translating ambiguous business requirements into AI-enabled architectures, PoCs, implementation roadmaps, integration patterns, and production support models across Microsoft 365 and Azure-based ecosystems.
+        </p>
 
-    <div class="education">
-        <h3 class="section-header-small">Education</h3>
-        <p class="randr">
-        Mangalayatan University, Aligarh
-        Doctor of Philosophy - PhD, Management Information Systems,
-        General · (2018 - 2026)
-        
-        Sikkim Manipal University, Gangtok
-        Master of Business Administration - MBA, Information Systems
-        Management · (2012 - 2013)
-        
-        Sikkim Manipal Institute of Technology - SMU
-        Bachelor of Technology - BTech, Computer Science · (1999 - 2004)
+        <h3 class="section-header-small">Core Skills</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; margin-bottom: 0.5rem;">
+            <span class="badge">AI & Solution Architecture</span>
+            <span class="badge">Microsoft Ecosystem & Azure</span>
+            <span class="badge">Enterprise Integration & APIs</span>
+            <span class="badge">Delivery, Governance & Stakeholders</span>
+            <span class="badge">Python · FastAPI · REST APIs</span>
+            <span class="badge">LLM integration · agentic workflows</span>
+            <span class="badge">Azure AI · OpenAI · Copilot</span>
+            <span class="badge">Docker · Kubernetes · CI/CD</span>
+        </div>
+        <ul style="columns: 2 220px; list-style: none; padding-left: 0.2rem; margin: 0.5rem 0 0.5rem 0;">
+            <li style="margin-bottom: 0.2rem;">✓ AI solution design & architecture</li>
+            <li style="margin-bottom: 0.2rem;">✓ Python/FastAPI, Pydantic, SQL/MariaDB</li>
+            <li style="margin-bottom: 0.2rem;">✓ Azure infrastructure & modernization</li>
+            <li style="margin-bottom: 0.2rem;">✓ Microsoft 365 · Power Platform</li>
+            <li style="margin-bottom: 0.2rem;">✓ API-driven systems · REST/SOAP</li>
+            <li style="margin-bottom: 0.2rem;">✓ Agentic workflows · LLM integration</li>
+            <li style="margin-bottom: 0.2rem;">✓ Technical PMO · program governance</li>
+            <li style="margin-bottom: 0.2rem;">✓ Stakeholder facilitation · workshops</li>
+        </ul>
 
-    </p>
-    </div>
+        <!-- Selected AI, Application & Architecture Portfolio -->
+        <h3 class="section-header-small">Selected AI, Application & Architecture Portfolio</h3>
+        <div style="background: #f2f8fe; border-radius: 20px; padding: 0.6rem 1.5rem 0.2rem 1.5rem;">
+            <p><strong>CivicPulse – AI Municipal Decision Intelligence</strong><br>
+            Architected an evidence-first approach for transforming fragmented authoritative municipal information into traceable, cross-source intelligence, defining provenance, truth classifications, immutable evidence snapshots, deterministic transformation stages, testing expectations, and AI-assisted development workflows.</p>
+            <p><strong>LottoLab – Python/FastAPI Analytics Platform</strong><br>
+            Designed and built a production-oriented statistical analysis and simulation platform using Python/FastAPI, SQLAlchemy, MariaDB, Pydantic, NumPy/Pandas, REST APIs, authentication, and health checks. Extensible with LLM-based insights and AI copilots.</p>
+            <p><strong>PAUMS – Project Allocation & Utilization Management System</strong><br>
+            Architected an API-driven application using FastAPI, MariaDB and modern web frontend, with structured development checkpoints and strict separation of concerns.</p>
+            <p><strong>Conversational AI / Bot Initiatives</strong><br>
+            Contributed to informational Q&A chatbot work using Microsoft Bot Framework with Azure/Bing services, integrating AI capabilities into Microsoft-centric environments.</p>
+        </div>
+
+        <!-- Professional Experience -->
+        <h3 class="section-header-small">Professional Experience</h3>
+
+        <div class="company">
+            <div class="companyname">Stefanini North America & APAC</div>
+            <div class="companytitle">TPMO Manager – Enterprise Technology Transformation</div>
+            <div class="period">Mar 2025 – Present · Canada (Remote) <span class="flag-icon">🇨🇦</span></div>
+            <div class="randr">
+                <ul>
+                    <li>Lead enterprise technology transformation across North America and APAC, connecting business objectives, architecture, platform strategy, integrations and operational outcomes, including AI-enabled workflows.</li>
+                    <li>Facilitate discovery workshops and architecture discussions with executives, business stakeholders, architects, engineering and operations teams.</li>
+                    <li>Provide technical leadership across enterprise platforms, automation, service reliability, integrations and modernization, positioning AI as strategic enabler.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="company">
+            <div class="companyname">Technologies PamTen</div>
+            <div class="companytitle">Senior Technical Project Manager – Infrastructure & Cloud Transformation</div>
+            <div class="period">Mar 2021 – Mar 2025 · Canada (Remote) <span class="flag-icon">🇨🇦</span></div>
+            <div class="randr">
+                <ul>
+                    <li>Led cloud, infrastructure and application modernization initiatives from discovery through architecture assessment, solution design, integration, testing, implementation and production stabilization.</li>
+                    <li>Co-led technical solution design, estimates and PoCs for major modernization opportunities, translating business and stakeholder requirements into architectures aligned with Azure and Microsoft ecosystem.</li>
+                    <li>Partnered with business, architecture and engineering teams to document requirements, integration boundaries and solution options – directly transferable to AI solution requirements.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="company">
+            <div class="companyname">NTT DATA Services</div>
+            <div class="companytitle">Director – Enterprise Platform & Systems Integration</div>
+            <div class="period">Dec 2014 – Jun 2021 · Bengaluru, India <span class="flag-icon">🇮🇳</span></div>
+            <div class="randr">
+                <ul>
+                    <li>Directed global teams delivering enterprise platforms, systems integration, automation, monitoring, infrastructure/cloud services and business-critical technology solutions.</li>
+                    <li>Partnered with customers, business leaders, security, architecture and engineering stakeholders to define technical roadmaps and integration architectures.</li>
+                    <li>Drove cloud/Microsoft ecosystem modernization, integration, automation, governance and operational improvement, contributing to infrastructure cost reduction.</li>
+                    <li>Contributed to conversational AI initiatives, including an informational Q&A chatbot using Microsoft Bot Framework and Azure/Bing services.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="company">
+            <div class="companyname">Aon</div>
+            <div class="companytitle">IND Tech Ops Lead – Infrastructure Monitoring & Automation</div>
+            <div class="period">Aug 2011 – Dec 2014 · Bangalore, India <span class="flag-icon">🇮🇳</span></div>
+            <div class="randr">
+                <ul>
+                    <li>Developed secure web applications and infrastructure dashboards, including SOAP/REST integrations that reduced reporting time and improved operational visibility.</li>
+                    <li>Led technical meetings, stakeholder presentations, automation solution design, documentation, SOP development and operational improvement.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="company">
+            <div class="companyname">Tata Consultancy Services · NTT DATA · Valtech · SIBIN Group</div>
+            <div class="companytitle">Earlier Technology Roles – EAI/B2B, Integration & Application Development</div>
+            <div class="period">2004 – 2011 <span class="flag-icon">🇮🇳</span></div>
+            <div class="randr">
+                Progressed through hands-on roles in solution analysis, EAI/B2B and systems integration, application development, monitoring/automation, scripting, troubleshooting and technical SME work, building foundational experience in enterprise middleware, APIs/integration, software engineering, and customer-facing technical delivery.
+            </div>
+        </div>
+
+        <!-- Architecture & Engineering Leadership -->
+        <h3 class="section-header-small">Architecture & Engineering Leadership</h3>
+        <ul style="padding-left: 1.5rem; margin-bottom: 1.2rem;">
+            <li>Translate business and product objectives into technical architecture, integration boundaries, AI opportunities and delivery increments.</li>
+            <li>Lead technical discovery and solution discussions with customers and cross-functional teams; communicate AI solution architecture and integration patterns to executive and engineering audiences.</li>
+            <li>Guide teams through design trade-offs, risks, dependencies, testing, user acceptance, production readiness and continuous improvement.</li>
+            <li>Maintain hands-on capability to prototype, inspect application and API architecture, troubleshoot Linux-hosted services and use Git-based workflows for AI-enabled solutions.</li>
+        </ul>
+
+        <!-- Certifications -->
+        <h3 class="section-header-small">Certifications</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem 1.5rem; background: #eef4f9; padding: 0.8rem 1.5rem; border-radius: 40px;">
+            <span>Microsoft Certified: Azure Fundamentals</span>
+            <span>Azure AI Fundamentals</span>
+            <span>Azure Data Fundamentals</span>
+            <span>Power Platform Fundamentals</span>
+            <span>AWS Certified Cloud Practitioner</span>
+            <span>ServiceNow Certified System Administrator</span>
+            <span>ITIL® Foundation</span>
+        </div>
+
+        <!-- Education -->
+        <div class="education">
+            <h3 class="section-header-small" style="margin-top: 0;">Education</h3>
+            <p><strong>PhD, Management Information Systems</strong> (In Progress) – Mangalayatan University<br>
+            <strong>MBA, Information Systems Management</strong> – Sikkim Manipal University<br>
+            <strong>B.Tech, Computer Science & Engineering</strong> – Sikkim Manipal Institute of Technology</p>
+        </div>
+
+        <!-- Role-Specific Development -->
+        <h3 class="section-header-small">Role-Specific Development</h3>
+        <p style="background: #f1f6fb; padding: 0.8rem 1.5rem; border-radius: 30px;">
+            Actively deepening modern AI-native architecture skills around agentic application patterns, orchestration frameworks such as LangGraph, tool-using workflows, stateful execution and human-in-the-loop design. Recent work includes designing and building production-quality AI applications using Python, FastAPI, REST APIs and LLM integration concepts, focusing on evidence-first architectures, governance and enterprise integration patterns.
+        </p>
     </section>
+
     <footer class="main-footer">
-     <div class="container main-footer-container">
-     <h3 class="website-name">
-         
-     </h1>
-     <ul class="nav footer-nav">
-         <li><a href="http://www.instagram.com" target="_blank"><img src="images/Instagram.svg.png" ></a></li>
-         <li><a href="http://www.linkedin.com" target="_blank"><img src="images/linkedin.svg" ></a></li>
-     </ul>
-    </div>
+        <div class="container main-footer-container">
+            <span style="font-weight: 300;">Sachin Tewari · AI Solution Architect</span>
+            <ul class="nav footer-nav">
+                <li><a href="http://www.instagram.com" target="_blank"><img src="images/Instagram.svg.png" alt="Instagram"></a></li>
+                <li><a href="http://www.linkedin.com" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a></li>
+            </ul>
+        </div>
     </footer>
-    
+
+    <script>
+        // simple counter for years of experience (optional)
+        (function(){
+            const startYear = 2004;
+            const currentYear = new Date().getFullYear();
+            const years = currentYear - startYear;
+            const counterEl = document.getElementById('counter');
+            if(counterEl) {
+                counterEl.textContent = years + ' years';
+            }
+        })();
+    </script>
 </body>
 </html>
