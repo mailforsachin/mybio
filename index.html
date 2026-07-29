@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sachin Tewari · AI Solution Architect</title>
     <style>
         * {
@@ -13,7 +13,7 @@
         }
         body {
             font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
-            background: #f8fafc;
+            background: #f0f4f8;
             color: #1e293b;
             line-height: 1.6;
         }
@@ -27,22 +27,24 @@
         .main-header {
             background: #0b2b40;
             color: white;
-            padding: 0.8rem 0 0.3rem 0;
+            padding: 0.4rem 0 0.2rem 0;
         }
+
+        /* Navigation - clean row */
         .main-nav ul {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1.5rem 2.2rem;
+            gap: 1.8rem 2.5rem;
             list-style: none;
-            padding: 0.5rem 1rem 0.8rem 1rem;
+            padding: 0.6rem 1rem 0.8rem 1rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
         .main-nav ul li a {
             color: #d6e4ed;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             letter-spacing: 0.3px;
             transition: 0.2s;
         }
@@ -51,12 +53,13 @@
             text-decoration: underline;
         }
 
+        /* Header title */
         .header-title {
             text-align: center;
             padding: 0.6rem 1rem 0.8rem 1rem;
         }
         .header-title .name {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             font-weight: 600;
             letter-spacing: 1px;
         }
@@ -68,65 +71,69 @@
             margin-top: 0.1rem;
         }
 
-        /* ===== PROFILE IMAGE ===== */
-        .profile-wrapper {
+        /* ===== PROFILE IMAGE - centered, no overlap ===== */
+        .profile-section {
             text-align: center;
-            margin-top: -2.2rem;
+            padding: 1.8rem 0 0.2rem 0;
+            background: white;
+            margin: 0 auto;
         }
-        .profile-image {
-            width: 130px;
-            height: 130px;
+        .profile-section .profile-image {
+            width: 140px;
+            height: 140px;
             object-fit: cover;
             border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            border: 4px solid #0b2b40;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
             background: white;
+        }
+
+        /* ===== CONTACT INFO - directly below image ===== */
+        .contact-section {
+            background: white;
+            padding: 0.5rem 2rem 1.2rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #e9eff4;
+        }
+        .contact-section .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.4rem 1.5rem;
+            font-size: 0.95rem;
+            color: #1e3d52;
+        }
+        .contact-section .contact-row a {
+            color: #0b2b40;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .contact-section .contact-row a:hover {
+            color: #2b6c8f;
+            text-decoration: underline;
+        }
+        .contact-section .contact-row .sep {
+            color: #94a3b8;
         }
 
         /* ===== CONTENT ===== */
         .content-section {
             background: white;
-            padding: 2rem 2.2rem 2.5rem 2.2rem;
-            border-radius: 24px;
-            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
-            margin: 1.5rem auto 2rem auto;
-        }
-
-        /* Contact Bar */
-        .contact-bar {
-            background: #f0f7fd;
-            border-radius: 16px;
-            padding: 0.8rem 1.8rem;
-            margin: 1rem 0 1.5rem 0;
-            border-left: 6px solid #2b6c8f;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.8rem 2rem;
-            font-size: 0.95rem;
-        }
-        .contact-bar span {
-            color: #1e3d52;
-        }
-        .contact-bar strong {
-            color: #0b2b40;
+            padding: 1.8rem 2.2rem 2.2rem 2.2rem;
+            border-radius: 0 0 24px 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            margin: 0 auto 2rem auto;
         }
 
         .section-header {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 600;
-            margin: 1.8rem 0 0.4rem 0;
+            margin: 1.6rem 0 0.3rem 0;
             color: #0b2b40;
             border-left: 6px solid #2b6c8f;
             padding-left: 1rem;
-        }
-        .section-header-small {
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin: 1.6rem 0 0.6rem 0;
-            color: #1e4b62;
-            border-bottom: 2px solid #e6edf4;
-            padding-bottom: 0.3rem;
         }
 
         .summary-box {
@@ -134,7 +141,6 @@
             padding: 1rem 1.8rem;
             border-radius: 18px;
             border: 1px solid #dfeaf3;
-            margin-bottom: 0.5rem;
         }
 
         /* Badges */
@@ -151,79 +157,79 @@
         .badge-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem 0.9rem;
-            margin: 0.6rem 0 0.4rem 0;
+            gap: 0.4rem 0.8rem;
+            margin: 0.4rem 0 0.2rem 0;
         }
 
         .skill-list {
             columns: 2 200px;
             list-style: none;
             padding-left: 0.2rem;
-            margin: 0.3rem 0 0.2rem 0;
+            margin: 0.2rem 0 0.2rem 0;
         }
         .skill-list li {
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.15rem;
             font-size: 0.95rem;
         }
 
         /* Company entries */
         .company {
-            margin-top: 1.2rem;
+            margin-top: 1rem;
             background: #f9fcff;
-            padding: 0.6rem 1.5rem 0.3rem 1.5rem;
+            padding: 0.5rem 1.5rem 0.2rem 1.5rem;
             border-radius: 18px;
             border: 1px solid #e9eff4;
         }
         .companyname {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 600;
             color: #0b2b40;
         }
         .companytitle {
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             color: #2b5f7a;
             font-weight: 500;
         }
         .period {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             color: #5b6f82;
-            margin-top: 0.1rem;
+            margin-top: 0.05rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.4rem;
         }
         .flag-icon {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         .randr {
-            margin: 0.5rem 0 0.4rem 0;
+            margin: 0.4rem 0 0.2rem 0;
             padding-left: 0.2rem;
-            line-height: 1.7;
+            line-height: 1.65;
         }
         .randr ul {
             list-style: disc;
             padding-left: 1.5rem;
         }
         .randr li {
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.15rem;
         }
 
         .education-box {
-            margin-top: 1.8rem;
+            margin-top: 1.5rem;
             background: #f1f6f9;
-            padding: 1rem 1.8rem;
+            padding: 0.8rem 1.8rem;
             border-radius: 20px;
         }
         .education-box p {
-            line-height: 1.9;
+            line-height: 1.8;
         }
 
         /* ===== FOOTER ===== */
         .main-footer {
             background: #0b2b40;
             color: #e2e8f0;
-            padding: 0.8rem 0;
-            margin-top: 1.5rem;
+            padding: 0.7rem 0;
+            margin-top: 1rem;
         }
         .main-footer-container {
             display: flex;
@@ -248,22 +254,38 @@
 
         @media (max-width: 700px) {
             .main-nav ul {
-                gap: 0.6rem 1.2rem;
+                gap: 0.5rem 1.2rem;
+                padding: 0.4rem 0.5rem 0.6rem 0.5rem;
+            }
+            .main-nav ul li a {
+                font-size: 0.8rem;
             }
             .header-title .name {
                 font-size: 1.6rem;
             }
+            .header-title .subtitle {
+                font-size: 0.85rem;
+            }
             .content-section {
                 padding: 1.2rem;
             }
-            .contact-bar {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.3rem;
-                padding: 0.8rem 1rem;
+            .contact-section .contact-row {
+                font-size: 0.85rem;
+                gap: 0.2rem 0.8rem;
             }
             .skill-list {
                 columns: 1;
+            }
+            .badge-group {
+                gap: 0.3rem 0.6rem;
+            }
+            .badge {
+                font-size: 0.7rem;
+                padding: 0.15rem 0.8rem;
+            }
+            .profile-section .profile-image {
+                width: 110px;
+                height: 110px;
             }
         }
     </style>
@@ -284,25 +306,30 @@
         </nav>
         <div class="header-title">
             <span class="name">Sachin Tewari</span>
-            <span class="subtitle">AI Solution Architect · Enterprise &amp; Cloud Architecture · Python/FastAPI · Microsoft 365 &amp; Azure</span>
+            <span class="subtitle">AI Solution Architect · Enterprise &amp; Cloud · Python/FastAPI · Microsoft 365 &amp; Azure</span>
         </div>
     </header>
 
-    <!-- ===== PROFILE IMAGE ===== -->
-    <div class="profile-wrapper container">
-        <img class="profile-image" src="images/1671300722364.jfif" alt="Sachin Tewari">
+    <!-- ===== PROFILE IMAGE - centered, no overlap ===== -->
+    <div class="profile-section container">
+        <img class="profile-image" src="images/1671300722364.jfif" alt="Sachin Tewari" />
+    </div>
+
+    <!-- ===== CONTACT INFO - directly below image ===== -->
+    <div class="contact-section container">
+        <div class="contact-row">
+            <span><strong>Edmonton, Alberta, Canada</strong> · +1 514 210 2131 · sachintewari@icloud.com</span>
+            <span class="sep">|</span>
+            <a href="https://linkedin.com/in/tewarisachin" target="_blank">LinkedIn: linkedin.com/in/tewarisachin</a>
+            <span class="sep">|</span>
+            <a href="https://github.com/mailforsachin" target="_blank">GitHub: github.com/mailforsachin</a>
+            <span class="sep">|</span>
+            <a href="https://mailforsachin.github.io/mybio/" target="_blank">Portfolio: mailforsachin.github.io/mybio/</a>
+        </div>
     </div>
 
     <!-- ===== CONTENT ===== -->
     <section class="content-section container">
-
-        <!-- Contact Bar -->
-        <div class="contact-bar">
-            <span><strong>Edmonton, Alberta, Canada</strong> · +1 514 210 2131 · sachintewari@icloud.com</span>
-            <span>LinkedIn: linkedin.com/in/tewarisachin</span>
-            <span>GitHub: github.com/mailforsachin</span>
-            <span>Portfolio: mailforsachin.github.io/mybio/</span>
-        </div>
 
         <!-- Executive Summary -->
         <h2 class="section-header">Executive Summary</h2>
@@ -452,8 +479,8 @@
         <div class="container main-footer-container">
             <span style="font-weight: 300;">Sachin Tewari · AI Solution Architect</span>
             <ul class="footer-nav">
-                <li><a href="http://www.instagram.com" target="_blank"><img src="images/Instagram.svg.png" alt="Instagram"></a></li>
-                <li><a href="http://www.linkedin.com" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a></li>
+                <li><a href="http://www.instagram.com" target="_blank"><img src="images/Instagram.svg.png" alt="Instagram" /></a></li>
+                <li><a href="http://www.linkedin.com" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" /></a></li>
             </ul>
         </div>
     </footer>
