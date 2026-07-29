@@ -18,28 +18,28 @@
             line-height: 1.6;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
-        /* header */
+
+        /* ===== HEADER ===== */
         .main-header {
             background: #0b2b40;
             color: white;
-            padding: 1rem 0 0.5rem 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 0.8rem 0 0.3rem 0;
         }
         .main-nav ul {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1.8rem;
+            gap: 1.5rem 2.2rem;
             list-style: none;
-            padding: 0.5rem 1rem;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem 0.8rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
         .main-nav ul li a {
-            color: #e2e8f0;
+            color: #d6e4ed;
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
@@ -47,123 +47,183 @@
             transition: 0.2s;
         }
         .main-nav ul li a:hover {
-            color: #b6d4e3;
+            color: #ffffff;
             text-decoration: underline;
         }
-        .website-name {
+
+        .header-title {
+            text-align: center;
+            padding: 0.6rem 1rem 0.8rem 1rem;
+        }
+        .header-title .name {
             font-size: 2.2rem;
             font-weight: 600;
-            padding: 0.4rem 1rem 1rem 1rem;
             letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
         }
-        .website-name-small {
+        .header-title .subtitle {
             font-size: 1rem;
             font-weight: 300;
             color: #b6d4e3;
+            display: block;
+            margin-top: 0.1rem;
+        }
+
+        /* ===== PROFILE IMAGE ===== */
+        .profile-wrapper {
+            text-align: center;
+            margin-top: -2.2rem;
         }
         .profile-image {
-            width: 140px;
-            height: 140px;
+            width: 130px;
+            height: 130px;
             object-fit: cover;
             border-radius: 50%;
             border: 4px solid white;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            display: block;
-            margin: -3rem auto 1rem auto;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
             background: white;
         }
+
+        /* ===== CONTENT ===== */
+        .content-section {
+            background: white;
+            padding: 2rem 2.2rem 2.5rem 2.2rem;
+            border-radius: 24px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+            margin: 1.5rem auto 2rem auto;
+        }
+
+        /* Contact Bar */
+        .contact-bar {
+            background: #f0f7fd;
+            border-radius: 16px;
+            padding: 0.8rem 1.8rem;
+            margin: 1rem 0 1.5rem 0;
+            border-left: 6px solid #2b6c8f;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem 2rem;
+            font-size: 0.95rem;
+        }
+        .contact-bar span {
+            color: #1e3d52;
+        }
+        .contact-bar strong {
+            color: #0b2b40;
+        }
+
         .section-header {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 600;
-            margin: 1.8rem 0 0.25rem 0;
+            margin: 1.8rem 0 0.4rem 0;
             color: #0b2b40;
             border-left: 6px solid #2b6c8f;
             padding-left: 1rem;
         }
         .section-header-small {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 500;
-            margin: 1.8rem 0 0.8rem 0;
+            margin: 1.6rem 0 0.6rem 0;
             color: #1e4b62;
-            border-bottom: 2px solid #dce7f0;
+            border-bottom: 2px solid #e6edf4;
             padding-bottom: 0.3rem;
         }
-        .content-section {
-            background: white;
-            padding: 2rem 2rem 2.5rem 2rem;
-            border-radius: 24px;
-            box-shadow: 0 6px 24px rgba(0,0,0,0.03);
-            margin: 2rem auto;
+
+        .summary-box {
+            background: #f8fcff;
+            padding: 1rem 1.8rem;
+            border-radius: 18px;
+            border: 1px solid #dfeaf3;
+            margin-bottom: 0.5rem;
         }
-        .professional-experience {
-            font-size: 1.05rem;
-            margin-bottom: 2rem;
-            background: #f1f6f9;
-            padding: 1.2rem 1.8rem;
-            border-radius: 20px;
-            border-left: 4px solid #2b6c8f;
+
+        /* Badges */
+        .badge {
+            background: #e7edf3;
+            padding: 0.2rem 1.1rem;
+            border-radius: 40px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: #1d3d52;
+            letter-spacing: 0.2px;
+            display: inline-block;
         }
-        .professional-experience strong {
-            color: #0b2b40;
+        .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.9rem;
+            margin: 0.6rem 0 0.4rem 0;
         }
+
+        .skill-list {
+            columns: 2 200px;
+            list-style: none;
+            padding-left: 0.2rem;
+            margin: 0.3rem 0 0.2rem 0;
+        }
+        .skill-list li {
+            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
+        }
+
+        /* Company entries */
         .company {
-            margin-top: 1.8rem;
+            margin-top: 1.2rem;
             background: #f9fcff;
-            padding: 0.8rem 1.5rem 0.5rem 1.5rem;
-            border-radius: 20px;
+            padding: 0.6rem 1.5rem 0.3rem 1.5rem;
+            border-radius: 18px;
             border: 1px solid #e9eff4;
         }
         .companyname {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
             color: #0b2b40;
         }
         .companytitle {
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: #2b5f7a;
             font-weight: 500;
         }
         .period {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #5b6f82;
-            margin-top: 0.2rem;
+            margin-top: 0.1rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
         .flag-icon {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
         .randr {
-            margin: 1rem 0 0.8rem 0;
+            margin: 0.5rem 0 0.4rem 0;
             padding-left: 0.2rem;
             line-height: 1.7;
         }
         .randr ul {
             list-style: disc;
-            padding-left: 1.8rem;
+            padding-left: 1.5rem;
         }
         .randr li {
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
-        .education {
-            margin-top: 2.5rem;
+
+        .education-box {
+            margin-top: 1.8rem;
             background: #f1f6f9;
-            padding: 1.2rem 1.8rem;
-            border-radius: 24px;
+            padding: 1rem 1.8rem;
+            border-radius: 20px;
         }
-        .education p {
+        .education-box p {
             line-height: 1.9;
         }
+
+        /* ===== FOOTER ===== */
         .main-footer {
             background: #0b2b40;
             color: #e2e8f0;
-            padding: 1rem 0;
-            margin-top: 2rem;
+            padding: 0.8rem 0;
+            margin-top: 1.5rem;
         }
         .main-footer-container {
             display: flex;
@@ -173,144 +233,124 @@
         }
         .footer-nav {
             display: flex;
-            gap: 1.5rem;
+            gap: 1.2rem;
             list-style: none;
         }
         .footer-nav li a img {
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
             filter: brightness(0) invert(1);
             transition: 0.2s;
         }
         .footer-nav li a:hover img {
             opacity: 0.7;
         }
-        .badge-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem 1.2rem;
-            margin: 1.2rem 0 0.8rem 0;
-        }
-        .badge {
-            background: #e7edf3;
-            padding: 0.2rem 1rem;
-            border-radius: 40px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: #1d3d52;
-            letter-spacing: 0.3px;
-        }
-        .summary-highlight {
-            background: #f0f7fd;
-            border-radius: 24px;
-            padding: 1.2rem 1.8rem;
-            margin: 1.2rem 0;
-            border-left: 8px solid #2b6c8f;
-        }
-        .ai-tag {
-            background: #1e4b62;
-            color: white;
-            padding: 0.2rem 0.9rem;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
+
         @media (max-width: 700px) {
             .main-nav ul {
-                gap: 0.8rem;
+                gap: 0.6rem 1.2rem;
             }
-            .website-name {
-                font-size: 1.8rem;
-                flex-wrap: wrap;
-            }
-            .profile-image {
-                width: 110px;
-                height: 110px;
-                margin-top: -2.5rem;
+            .header-title .name {
+                font-size: 1.6rem;
             }
             .content-section {
                 padding: 1.2rem;
+            }
+            .contact-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.3rem;
+                padding: 0.8rem 1rem;
+            }
+            .skill-list {
+                columns: 1;
             }
         }
     </style>
 </head>
 <body>
+
+    <!-- ===== HEADER ===== -->
     <header class="main-header">
-        <nav class="nav main-nav">
+        <nav class="main-nav">
             <ul>
                 <li><a href="https://learn.microsoft.com/en-us/users/tewarisachin/transcript/v2z4qtn30ew2rx6" target="_blank">Microsoft</a></li>
-                <li><a href="https://github.com/mailforsachin?tab=repositories&q=&type=source&language=&sort=" target="_blank">GitHub</a></li>
+                <li><a href="https://github.com/mailforsachin" target="_blank">GitHub</a></li>
                 <li><a href="https://stackoverflow.com/users/2380526/sash-sheen" target="_blank">Stack Overflow</a></li>
-                <li><a href="https://www.linkedin.com/in/tewarisachin/details/recommendations/?detailScreenTabIndex=0" target="_blank">References</a></li>
+                <li><a href="https://www.linkedin.com/in/tewarisachin/details/recommendations/" target="_blank">References</a></li>
                 <li><a href="https://www.linkedin.com/in/tewarisachin/details/projects/" target="_blank">Projects</a></li>
                 <li><a href="https://nowlearning.servicenow.com/lxp?id=nl_public&user=sachintewa53af45" target="_blank">ServiceNow</a></li>
             </ul>
         </nav>
-        <div class="website-name">
-            Sachin Tewari
+        <div class="header-title">
+            <span class="name">Sachin Tewari</span>
+            <span class="subtitle">AI Solution Architect · Enterprise &amp; Cloud Architecture · Python/FastAPI · Microsoft 365 &amp; Azure</span>
         </div>
     </header>
 
-    <img class="profile-image" src="images/1671300722364.jfif" alt="Sachin Tewari profile">
+    <!-- ===== PROFILE IMAGE ===== -->
+    <div class="profile-wrapper container">
+        <img class="profile-image" src="images/1671300722364.jfif" alt="Sachin Tewari">
+    </div>
 
+    <!-- ===== CONTENT ===== -->
     <section class="content-section container">
-        <h2 class="section-header">AI Solution Architect · Enterprise & Cloud Architecture · Python/FastAPI · Azure</h2>
-        
-        <div class="summary-highlight">
-            <p><strong>Edmonton, Alberta, Canada · +1 514 210 2131 · sachintewari@icloud.com<br>
-            <span style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.3rem;">
-                <span>LinkedIn: linkedin.com/in/tewarisachin</span>
-                <span>GitHub: github.com/mailforsachin</span>
-                <span>Portfolio: mailforsachin.github.io/mybio/</span>
-            </span>
-            </p>
+
+        <!-- Contact Bar -->
+        <div class="contact-bar">
+            <span><strong>Edmonton, Alberta, Canada</strong> · +1 514 210 2131 · sachintewari@icloud.com</span>
+            <span>LinkedIn: linkedin.com/in/tewarisachin</span>
+            <span>GitHub: github.com/mailforsachin</span>
+            <span>Portfolio: mailforsachin.github.io/mybio/</span>
         </div>
 
-        <h3 class="section-header-small">Executive Summary</h3>
-        <p style="background: #f8fcff; padding: 0.8rem 1.5rem; border-radius: 20px; border: 1px solid #dfeaf3;">
-            AI solution and enterprise architect with <strong>22+ years</strong> of experience spanning enterprise platforms, cloud transformation, systems integration, application architecture, and global technology delivery. Combines senior-level architecture and stakeholder leadership with hands-on AI solution design and application development using Python, FastAPI, REST APIs, SQL/MariaDB, and modern LLM technologies. Skilled at translating ambiguous business requirements into AI-enabled architectures, PoCs, implementation roadmaps, integration patterns, and production support models across Microsoft 365 and Azure-based ecosystems.
-        </p>
+        <!-- Executive Summary -->
+        <h2 class="section-header">Executive Summary</h2>
+        <div class="summary-box">
+            <p>AI solution and enterprise architect with <strong>22+ years</strong> of experience spanning enterprise platforms, cloud transformation, systems integration, application architecture, and global technology delivery. Combines senior-level architecture and stakeholder leadership with hands-on AI solution design and application development using Python, FastAPI, REST APIs, SQL/MariaDB, and modern LLM technologies. Skilled at translating ambiguous business requirements into AI-enabled architectures, PoCs, implementation roadmaps, integration patterns, and production support models across Microsoft 365 and Azure-based ecosystems.</p>
+        </div>
 
-        <h3 class="section-header-small">Core Skills</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; margin-bottom: 0.5rem;">
-            <span class="badge">AI & Solution Architecture</span>
-            <span class="badge">Microsoft Ecosystem & Azure</span>
-            <span class="badge">Enterprise Integration & APIs</span>
-            <span class="badge">Delivery, Governance & Stakeholders</span>
+        <!-- Core Skills -->
+        <h2 class="section-header">Core Skills</h2>
+        <div class="badge-group">
+            <span class="badge">AI &amp; Solution Architecture</span>
+            <span class="badge">Microsoft Ecosystem &amp; Azure</span>
+            <span class="badge">Enterprise Integration &amp; APIs</span>
+            <span class="badge">Delivery, Governance &amp; Stakeholders</span>
             <span class="badge">Python · FastAPI · REST APIs</span>
             <span class="badge">LLM integration · agentic workflows</span>
             <span class="badge">Azure AI · OpenAI · Copilot</span>
             <span class="badge">Docker · Kubernetes · CI/CD</span>
         </div>
-        <ul style="columns: 2 220px; list-style: none; padding-left: 0.2rem; margin: 0.5rem 0 0.5rem 0;">
-            <li style="margin-bottom: 0.2rem;">✓ AI solution design & architecture</li>
-            <li style="margin-bottom: 0.2rem;">✓ Python/FastAPI, Pydantic, SQL/MariaDB</li>
-            <li style="margin-bottom: 0.2rem;">✓ Azure infrastructure & modernization</li>
-            <li style="margin-bottom: 0.2rem;">✓ Microsoft 365 · Power Platform</li>
-            <li style="margin-bottom: 0.2rem;">✓ API-driven systems · REST/SOAP</li>
-            <li style="margin-bottom: 0.2rem;">✓ Agentic workflows · LLM integration</li>
-            <li style="margin-bottom: 0.2rem;">✓ Technical PMO · program governance</li>
-            <li style="margin-bottom: 0.2rem;">✓ Stakeholder facilitation · workshops</li>
+        <ul class="skill-list">
+            <li>✓ AI solution design &amp; architecture</li>
+            <li>✓ Python/FastAPI, Pydantic, SQL/MariaDB</li>
+            <li>✓ Azure infrastructure &amp; modernization</li>
+            <li>✓ Microsoft 365 · Power Platform</li>
+            <li>✓ API-driven systems · REST/SOAP</li>
+            <li>✓ Agentic workflows · LLM integration</li>
+            <li>✓ Technical PMO · program governance</li>
+            <li>✓ Stakeholder facilitation · workshops</li>
         </ul>
 
-        <!-- Selected AI, Application & Architecture Portfolio -->
-        <h3 class="section-header-small">Selected AI, Application & Architecture Portfolio</h3>
-        <div style="background: #f2f8fe; border-radius: 20px; padding: 0.6rem 1.5rem 0.2rem 1.5rem;">
+        <!-- Selected Portfolio -->
+        <h2 class="section-header">Selected AI, Application &amp; Architecture Portfolio</h2>
+        <div style="background: #f2f8fe; border-radius: 18px; padding: 0.4rem 1.5rem 0.1rem 1.5rem;">
             <p><strong>CivicPulse – AI Municipal Decision Intelligence</strong><br>
             Architected an evidence-first approach for transforming fragmented authoritative municipal information into traceable, cross-source intelligence, defining provenance, truth classifications, immutable evidence snapshots, deterministic transformation stages, testing expectations, and AI-assisted development workflows.</p>
             <p><strong>LottoLab – Python/FastAPI Analytics Platform</strong><br>
             Designed and built a production-oriented statistical analysis and simulation platform using Python/FastAPI, SQLAlchemy, MariaDB, Pydantic, NumPy/Pandas, REST APIs, authentication, and health checks. Extensible with LLM-based insights and AI copilots.</p>
-            <p><strong>PAUMS – Project Allocation & Utilization Management System</strong><br>
+            <p><strong>PAUMS – Project Allocation &amp; Utilization Management System</strong><br>
             Architected an API-driven application using FastAPI, MariaDB and modern web frontend, with structured development checkpoints and strict separation of concerns.</p>
             <p><strong>Conversational AI / Bot Initiatives</strong><br>
-            Contributed to informational Q&A chatbot work using Microsoft Bot Framework with Azure/Bing services, integrating AI capabilities into Microsoft-centric environments.</p>
+            Contributed to informational Q&amp;A chatbot work using Microsoft Bot Framework with Azure/Bing services, integrating AI capabilities into Microsoft-centric environments.</p>
         </div>
 
         <!-- Professional Experience -->
-        <h3 class="section-header-small">Professional Experience</h3>
+        <h2 class="section-header">Professional Experience</h2>
 
         <div class="company">
-            <div class="companyname">Stefanini North America & APAC</div>
+            <div class="companyname">Stefanini North America &amp; APAC</div>
             <div class="companytitle">TPMO Manager – Enterprise Technology Transformation</div>
             <div class="period">Mar 2025 – Present · Canada (Remote) <span class="flag-icon">🇨🇦</span></div>
             <div class="randr">
@@ -324,7 +364,7 @@
 
         <div class="company">
             <div class="companyname">Technologies PamTen</div>
-            <div class="companytitle">Senior Technical Project Manager – Infrastructure & Cloud Transformation</div>
+            <div class="companytitle">Senior Technical Project Manager – Infrastructure &amp; Cloud Transformation</div>
             <div class="period">Mar 2021 – Mar 2025 · Canada (Remote) <span class="flag-icon">🇨🇦</span></div>
             <div class="randr">
                 <ul>
@@ -337,21 +377,21 @@
 
         <div class="company">
             <div class="companyname">NTT DATA Services</div>
-            <div class="companytitle">Director – Enterprise Platform & Systems Integration</div>
+            <div class="companytitle">Director – Enterprise Platform &amp; Systems Integration</div>
             <div class="period">Dec 2014 – Jun 2021 · Bengaluru, India <span class="flag-icon">🇮🇳</span></div>
             <div class="randr">
                 <ul>
                     <li>Directed global teams delivering enterprise platforms, systems integration, automation, monitoring, infrastructure/cloud services and business-critical technology solutions.</li>
                     <li>Partnered with customers, business leaders, security, architecture and engineering stakeholders to define technical roadmaps and integration architectures.</li>
                     <li>Drove cloud/Microsoft ecosystem modernization, integration, automation, governance and operational improvement, contributing to infrastructure cost reduction.</li>
-                    <li>Contributed to conversational AI initiatives, including an informational Q&A chatbot using Microsoft Bot Framework and Azure/Bing services.</li>
+                    <li>Contributed to conversational AI initiatives, including an informational Q&amp;A chatbot using Microsoft Bot Framework and Azure/Bing services.</li>
                 </ul>
             </div>
         </div>
 
         <div class="company">
             <div class="companyname">Aon</div>
-            <div class="companytitle">IND Tech Ops Lead – Infrastructure Monitoring & Automation</div>
+            <div class="companytitle">IND Tech Ops Lead – Infrastructure Monitoring &amp; Automation</div>
             <div class="period">Aug 2011 – Dec 2014 · Bangalore, India <span class="flag-icon">🇮🇳</span></div>
             <div class="randr">
                 <ul>
@@ -363,16 +403,16 @@
 
         <div class="company">
             <div class="companyname">Tata Consultancy Services · NTT DATA · Valtech · SIBIN Group</div>
-            <div class="companytitle">Earlier Technology Roles – EAI/B2B, Integration & Application Development</div>
+            <div class="companytitle">Earlier Technology Roles – EAI/B2B, Integration &amp; Application Development</div>
             <div class="period">2004 – 2011 <span class="flag-icon">🇮🇳</span></div>
             <div class="randr">
                 Progressed through hands-on roles in solution analysis, EAI/B2B and systems integration, application development, monitoring/automation, scripting, troubleshooting and technical SME work, building foundational experience in enterprise middleware, APIs/integration, software engineering, and customer-facing technical delivery.
             </div>
         </div>
 
-        <!-- Architecture & Engineering Leadership -->
-        <h3 class="section-header-small">Architecture & Engineering Leadership</h3>
-        <ul style="padding-left: 1.5rem; margin-bottom: 1.2rem;">
+        <!-- Architecture Leadership -->
+        <h2 class="section-header">Architecture &amp; Engineering Leadership</h2>
+        <ul style="padding-left: 1.5rem; margin-bottom: 0.8rem;">
             <li>Translate business and product objectives into technical architecture, integration boundaries, AI opportunities and delivery increments.</li>
             <li>Lead technical discovery and solution discussions with customers and cross-functional teams; communicate AI solution architecture and integration patterns to executive and engineering audiences.</li>
             <li>Guide teams through design trade-offs, risks, dependencies, testing, user acceptance, production readiness and continuous improvement.</li>
@@ -380,8 +420,8 @@
         </ul>
 
         <!-- Certifications -->
-        <h3 class="section-header-small">Certifications</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem 1.5rem; background: #eef4f9; padding: 0.8rem 1.5rem; border-radius: 40px;">
+        <h2 class="section-header">Certifications</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; background: #eef4f9; padding: 0.6rem 1.5rem; border-radius: 40px;">
             <span>Microsoft Certified: Azure Fundamentals</span>
             <span>Azure AI Fundamentals</span>
             <span>Azure Data Fundamentals</span>
@@ -392,41 +432,31 @@
         </div>
 
         <!-- Education -->
-        <div class="education">
-            <h3 class="section-header-small" style="margin-top: 0;">Education</h3>
+        <div class="education-box">
+            <h3 style="font-size: 1.2rem; color: #1e4b62; margin-bottom: 0.3rem;">Education</h3>
             <p><strong>PhD, Management Information Systems</strong> (In Progress) – Mangalayatan University<br>
             <strong>MBA, Information Systems Management</strong> – Sikkim Manipal University<br>
-            <strong>B.Tech, Computer Science & Engineering</strong> – Sikkim Manipal Institute of Technology</p>
+            <strong>B.Tech, Computer Science &amp; Engineering</strong> – Sikkim Manipal Institute of Technology</p>
         </div>
 
         <!-- Role-Specific Development -->
-        <h3 class="section-header-small">Role-Specific Development</h3>
+        <h2 class="section-header">Role-Specific Development</h2>
         <p style="background: #f1f6fb; padding: 0.8rem 1.5rem; border-radius: 30px;">
             Actively deepening modern AI-native architecture skills around agentic application patterns, orchestration frameworks such as LangGraph, tool-using workflows, stateful execution and human-in-the-loop design. Recent work includes designing and building production-quality AI applications using Python, FastAPI, REST APIs and LLM integration concepts, focusing on evidence-first architectures, governance and enterprise integration patterns.
         </p>
+
     </section>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="main-footer">
         <div class="container main-footer-container">
             <span style="font-weight: 300;">Sachin Tewari · AI Solution Architect</span>
-            <ul class="nav footer-nav">
+            <ul class="footer-nav">
                 <li><a href="http://www.instagram.com" target="_blank"><img src="images/Instagram.svg.png" alt="Instagram"></a></li>
                 <li><a href="http://www.linkedin.com" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a></li>
             </ul>
         </div>
     </footer>
 
-    <script>
-        // simple counter for years of experience (optional)
-        (function(){
-            const startYear = 2004;
-            const currentYear = new Date().getFullYear();
-            const years = currentYear - startYear;
-            const counterEl = document.getElementById('counter');
-            if(counterEl) {
-                counterEl.textContent = years + ' years';
-            }
-        })();
-    </script>
 </body>
 </html>
